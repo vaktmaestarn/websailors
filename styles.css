@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Lemon';
-  src: url('/fonts/LEMONMILK-Regular.otf') format('opentype');
+  src: url('fonts/LEMONMILK-Regular.otf') format('opentype');
 }
 
 body {
@@ -74,3 +74,4 @@ footer {
   background-size: cover;
   transform: rotate(180deg);
 }
+
