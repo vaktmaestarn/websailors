@@ -1,0 +1,76 @@
+@font-face {
+  font-family: 'Lemon';
+  src: url('/fonts/LEMONMILK-Regular.otf') format('opentype');
+}
+
+body {
+  margin: 0;
+  font-family: 'Lemon', sans-serif;
+  background: linear-gradient(to bottom, #e0f7ff, #ffffff);
+  color: #002b45;
+}
+
+header {
+  padding: 2rem;
+  text-align: center;
+  background-color: #006994;
+  color: white;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+section.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+section.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+section.hero p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #006994;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #004e6e;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  background-color: #f0f8ff;
+  color: #004e6e;
+}
+
+.wave {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background: url('https://svgshare.com/i/11tx.svg') repeat-x;
+  background-size: cover;
+  transform: rotate(180deg);
+}
