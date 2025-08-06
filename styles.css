@@ -245,3 +245,66 @@ footer {
   color: #006994;
   font-weight: bold;
 }
+
+/* Contact form styles */
+
+.contact-section {
+      max-width: 600px;
+      margin: 5rem auto;
+      padding: 2rem;
+      border-radius: 20px;
+      background-color: #f9f9f9;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .contact-section h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 1rem;
+      border: 2px solid #006994;
+      border-radius: 50px;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+
+    .contact-form textarea {
+      height: 150px;
+      border-radius: 30px;
+      resize: vertical;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: #999;
+    }
+
+    .send-button {
+      background-color: #006994;
+      color: white;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 40px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .send-button.fly {
+      animation: sailAway 1.2s forwards;
+    }
+
+    @keyframes sailAway {
+      0% { transform: translateX(0) rotate(0); }
+      30% { transform: translateX(50px) rotate(-5deg); }
+      60% { transform: translateX(150px) rotate(10deg); opacity: 1; }
+      100% { transform: translateX(300px) rotate(-10deg); opacity: 0; }
+    }

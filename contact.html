@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt – Websailors</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .contact-section {
+      max-width: 600px;
+      margin: 5rem auto;
+      padding: 2rem;
+      border-radius: 20px;
+      background-color: #f9f9f9;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .contact-section h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 1rem;
+      border: 2px solid #006994;
+      border-radius: 50px;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+
+    .contact-form textarea {
+      height: 150px;
+      border-radius: 30px;
+      resize: vertical;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: #999;
+    }
+
+    .send-button {
+      background-color: #006994;
+      color: white;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 40px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .send-button.fly {
+      animation: sailAway 1.2s forwards;
+    }
+
+    @keyframes sailAway {
+      0% { transform: translateX(0) rotate(0); }
+      30% { transform: translateX(50px) rotate(-5deg); }
+      60% { transform: translateX(150px) rotate(10deg); opacity: 1; }
+      100% { transform: translateX(300px) rotate(-10deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <div class="menu-wrapper">
+      <div class="hamburger">☰</div>
+      <div class="menu-items">
+        <a href="index.html">Hem</a>
+        <a href="blog.html">Blogg</a>
+        <a href="#">Om oss</a>
+        <a href="contact.html">Kontakt</a>
+      </div>
+    </div>
+    <h1>Kontakta oss</h1>
+    <p>Har du frågor eller vill starta ett projekt? Skicka ett meddelande!</p>
+    <div class="header-wave"></div>
+  </header>
+
+  <section class="contact-section">
+    <h2>Kontaktformulär</h2>
+    <form class="contact-form" onsubmit="return handleSend(event)">
+      <input type="text" name="namn" placeholder="Namn / Företagsnamn" required>
+      <input type="email" name="email" placeholder="Mailadress" required>
+      <textarea name="meddelande" placeholder="Ditt meddelande..." required></textarea>
+      <button class="send-button" type="submit">Skicka</button>
+    </form>
+  </section>
+
+  <script>
+    function handleSend(e) {
+      e.preventDefault();
+      const button = document.querySelector('.send-button');
+      button.innerHTML = '⛵';
+      button.classList.add('fly');
+
+      // Du kan här lägga till kod för att faktiskt skicka meddelandet
+      setTimeout(() => {
+        button.classList.remove('fly');
+        button.innerHTML = 'Skicka';
+        e.target.reset();
+      }, 1400);
+
+      return false;
+    }
+  </script>
+</body>
+</html>
